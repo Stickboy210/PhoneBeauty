@@ -51,7 +51,6 @@ jobs:
           
     - name: Download dlib model
       run: |
-        cd Phoneapp
         if [ ! -f shape_predictor_68_face_landmarks.dat ]; then
           wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
           bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
@@ -59,7 +58,6 @@ jobs:
         
     - name: Build with Buildozer
       run: |
-        cd Phoneapp
         buildozer -v android debug
       timeout-minutes: 180
       
@@ -67,5 +65,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: beautycamera-debug
-        path: Phoneapp/bin/*.apk
+        path: bin/*.apk
         retention-days: 30
