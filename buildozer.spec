@@ -26,10 +26,13 @@ requirements = python3,kivy,numpy,opencv-python,dlib
 # 添加本地recipes路径以支持dlib编译
 p4a.local_recipes = ./recipes
 
-android.api = 33
+# 自动接受Android SDK许可
+android.accept_sdk_license = True
+
+android.api = 31
 android.minapi = 21
-android.ndk = 25b
-android.sdk = 33
+android.ndk = 23b
+android.sdk = 31
 
 # 权限
 android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,INTERNET
