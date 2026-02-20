@@ -1,0 +1,19 @@
+# 美颜相机 - Python依赖
+
+# GUI框架
+kivy>=2.1.0
+kivy-garden.camera
+
+# 计算机视觉
+opencv-python>=4.8.0
+
+# 数值计算
+numpy>=1.24.0
+
+# 人脸检测与特征点
+# 注意: dlib安装需要CMake和C++编译器
+dlib>=19.24.0
+
+# 移动端打包（可选）
+# buildozer>=1.5.0
+# python-for-android
